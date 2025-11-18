@@ -1,3 +1,46 @@
-body{
-    background-color: aqua;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* HACK: 1rem = 10px */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+#galeria {
+    background-color: rgb(22, 211, 224);
+}
+
+#galeria img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* A partir de 768px cambiamos a versión escritorio */
+@media (min-width: 768px) {
+    #galeria img {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #galeria img {
+        width: 32%;
+    }
 }
